@@ -3,52 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn Portfolio</title>
+    <title>Elisa Zornig</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Flickity/flickity.css" media="screen">
+
 </head>
 <body class="bg-gray-100 text-gray-900">
 
-<!-- Navigatiebalk -->
-<nav class="bg-white shadow-md p-4">
-    <div class="container mx-auto flex justify-between">
-        <a href="#" class="font-bold text-lg">Mijn Portfolio</a>
-        <ul class="flex space-x-4">
-            <li><a href="#about" class="hover:text-blue-500">Over</a></li>
-            <li><a href="#projects" class="hover:text-blue-500">Projecten</a></li>
-            <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
-        </ul>
-    </div>
+<nav class="p-4 fixed w-full top-0 left-0 z-50 flex flex-row justify-evenly text-2xl bg-blue-950 bg-opacity-10 backdrop-blur-sm">
+    <a href="#about" class="hover:text-blue-500 text-white">Over mij</a>
+    <a href="#projects" class="hover:text-blue-500 text-white">Projecten</a>
+    <a href="#contact" class="hover:text-blue-500 text-white">Contact</a>
 </nav>
 
 <!-- Hero Sectie -->
-<header class="text-center py-20 bg-blue-500 text-white">
-    <h1 class="text-4xl font-bold">Welkom op mijn Portfolio</h1>
-    <p class="mt-2">Web Developer | Designer | Creatief</p>
+<header id="hero-section home" class="relative flex items-center justify-center text-center shadow-10xl">
+    <div id="particles-js" class="absolute inset-0"></div> <!-- Hier komt particles.js -->
+    <script src="particlesJS.js"></script>
+    <div class="relative z-10 text-white flex flex-row gap-24 items-center">
+        <div>
+            <h1 class="text-4xl m-0 p-0 font-bold ">Hi! Ik ben Elisa Zornig</h1>
+        </div>
+    </div>
 </header>
 
-<!-- Over Mij -->
-<section id="about" class="container mx-auto p-6">
-    <h2 class="text-2xl font-bold mb-4">Over Mij</h2>
-    <p>Ik ben een gepassioneerde ontwikkelaar met een liefde voor design en functionaliteit.</p>
-</section>
 
-<!-- Projecten -->
-<section id="projects" class="container mx-auto p-6">
-    <h2 class="text-2xl font-bold mb-4">Projecten</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="bg-white shadow-md p-4 rounded-lg">
-            <h3 class="text-lg font-semibold">Project 1</h3>
-            <p>Korte beschrijving van het project.</p>
+<!-- Over Mij -->
+<section class="container mx-auto px-6 py-32 max-w-5xl relative">
+    <!-- Foto erboven, gecentreerd -->
+    <div id="about" class="absolute -top-24 left-1/2 transform -translate-x-1/2">
+        <img src="images/me.jpg" alt="Foto van Elisa"
+             class="w-48 h-48 rounded-full object-cover border-4 border-white shadow-xl z-20">
+    </div>
+
+    <!-- Contentbox met tekst -->
+    <div class="bg-white rounded-2xl shadow-xl p-10 text-gray-800 relative z-10">
+        <h2 class="text-4xl font-extrabold mb-10 text-center text-blue-900">Over mij</h2>
+
+        <p class="mb-4 text-lg leading-relaxed">
+            Hoi! Ik ben Elisa, een tweedejaars CMGT-student met een passie voor front-end development en creatief design. Naast mijn studie werk ik in het basisonderwijs en sta ik één dag per week voor de klas. Ik ben leergierig, enthousiast en altijd open voor feedback.
+        </p>
+
+        <p class="mb-6 text-lg leading-relaxed">
+            Ik heb ervaring met programmeertalen en frameworks zoals HTML, CSS, JavaScript, React en Laravel. Met die kennis bouw ik interactieve projecten en blijf ik mezelf ontwikkelen.
+        </p>
+
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+            <div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-800">Talen</h3>
+                <ul class="list-disc list-inside text-gray-700">
+                    <li>Nederlands – Native</li>
+                    <li>Engels – C1</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-800">Skills</h3>
+                <ul class="list-disc list-inside text-gray-700">
+                    <li>Leiderschap</li>
+                    <li>Zelfstandig & proactief</li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="mt-10 swiper">
+            <div class="swiper-wrapper items-center">
+                <div class="swiper-slide"><img src="icons/html.png" alt="HTML" class="h-12 w-auto mx-auto"></div>
+                <div class="swiper-slide"><img src="icons/css.png" alt="CSS" class="h-12 w-auto mx-auto"></div>
+                <div class="swiper-slide"><img src="icons/js.png" alt="JavaScript" class="h-12 w-auto mx-auto"></div>
+                <div class="swiper-slide"><img src="icons/react.svg" alt="React" class="h-12 w-auto mx-auto"></div>
+                <div class="swiper-slide"><img src="icons/php.svg" alt="PHP" class="h-12 w-auto mx-auto"></div>
+                <div class="swiper-slide"><img src="icons/Laravel.png" alt="Laravel" class="h-12 w-auto mx-auto"></div>
+                <div class="swiper-slide"><img src="icons/ps.png" alt="Figma" class="h-12 w-auto mx-auto"></div>
+                <div class="swiper-slide"><img src="icons/ai.png" alt="Adobe XD" class="h-12 w-auto mx-auto"></div>
+                <div class="swiper-slide"><img src="icons/canva.png" alt="Adobe XD" class="h-12 w-auto mx-auto"></div>
+                <div class="swiper-slide"><img src="icons/phpstorm.png" alt="Adobe XD" class="h-12 w-auto mx-auto">
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Contact -->
-<section id="contact" class="container mx-auto p-6">
-    <h2 class="text-2xl font-bold mb-4">Contact</h2>
-    <p>Email: voorbeeld@email.com</p>
-    <p>LinkedIn: linkedin.com/in/voorbeeld</p>
+
+<section id="projects" class="container mx-auto px-6 py-20">
+    <h2 class="text-4xl font-extrabold mb-10 text-center text-blue-900">Projecten</h2>
+
+
+    <script src="Flickity/flickity.pkgd.min.js"></script>
+    <div class="gallery js-flickity"
+         data-flickity-options='{ "wrapAround": true }'>
+        <div class="gallery-cell" style="padding: 1.5rem; background-color: #f5f5f5; border-radius: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <img src="images/heemraadshive.png" alt="Heemraadshive afbeelding" style="border-radius: 1rem; width: 100%; height: auto; margin-bottom: 1rem;">
+            <div class="content">
+                <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">🐝 Heemraadshive – Een ontdekkingstocht vol nectar & mysterie 🌼</h3>
+                <p style="margin-bottom: 1rem;">
+                    Voor een schoolproject ontwikkelde ik samen met mijn team een verhalende ontdekkingsgame die zich afspeelt op het Heemraadsplein in Rotterdam. In dit spel bestuur je een bij die op avontuur gaat om nectar te verzamelen en zijn kolonie te redden, terwijl je vijanden zoals duiven, spinnen en een dierenbestrijder ontwijkt of verslaat.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    De game is speciaal ontworpen voor <strong>explorer-spelers</strong> die houden van ontdekken en mysterie. Er zijn geheime objecten te vinden, unieke hoedjes te unlocken 🧢, en een grote wereld om vrij in rond te vliegen.
+                </p>
+
+                <!-- Twee kolommen -->
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 1rem;">
+                    <!-- Mijn rol -->
+                    <div style="flex: 1 1 300px;">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">💻 Mijn rol</h4>
+                        <ul style="padding-left: 1rem; list-style: none;">
+                            <li>Co-programmeur (4.700+ regels code)</li>
+                            <li>Level designer & vijanden-bedenker</li>
+                            <li>🎨 Poster ontworpen in Adobe Illustrator met verborgen karakters</li>
+                        </ul>
+                    </div>
+
+                    <!-- Link en presentatie -->
+                    <div style="flex: 1 1 300px;">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">🎮 Game spelen</h4>
+                        <p style="margin-bottom: 0.75rem;">
+                            De game werd gepresenteerd op een <strong>arcadekast</strong> tijdens de eindmarkt, waar bezoekers zelf konden spelen.
+                        </p>
+                        <a href="https://severhaak.github.io/CLE4-Game/" target="_blank" style="display: inline-block; background-color: #ffcc00; color: #000; font-weight: bold; padding: 0.6rem 1.2rem; border-radius: 0.5rem; text-decoration: none; transition: background-color 0.3s;">
+                            🚀 Speel de game
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-cell" style="padding: 1.5rem; background-color: #f0f4f8; border-radius: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <img src="images/gebarentaal.png" alt="Gebarentaal Applicatie" style="border-radius: 1rem; width: 100%; height: auto; margin-bottom: 1rem;">
+            <div class="content">
+                <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">🧠 Gebarentaal bij Intake – Leerplatform voor HR studenten 🤟</h3>
+                <p style="margin-bottom: 1rem;">
+                    In samenwerking met een front-end en back-end team bouwden we een interactieve webapplicatie waarmee studenten het keuzevak <strong>Gebarentaal bij Intake</strong> beter kunnen oefenen en volgen. De tool biedt <strong>flitskaarten, interactieve opdrachten, een woordenboek</strong> en <strong>voortgangsregistratie</strong>, geïnspireerd op het Duolingo-model.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    Studenten loggen veilig in via de HR Single Sign-On en kunnen alleen deelnemen als ze door een docent zijn toegevoegd. Docenten hebben een eigen beheerpaneel om studenten toe te voegen en hun voortgang te volgen. Alles is ontworpen volgens de huisstijl van de Hogeschool Rotterdam en voldoet aan WCAG 2.1 (AA).
+                </p>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 1rem;">
+                    <!-- Mijn rol -->
+                    <div style="flex: 1 1 300px;">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">💻 Mijn rol</h4>
+                        <ul style="list-style: none; padding-left: 0; margin: 0;">
+                            <li>Front-end development met React ⚛️</li>
+                            <li>Implementatie van dark mode 🌙</li>
+                            <li>Voortgangsbalk en feedbacksysteem</li>
+                            <li>Gebarenwoordenboek + filter & favorieten ⭐</li>
+                            <li>Design + toegankelijkheid (WCAG 2.1)</li>
+                            <li>Presentatie & einddemo opgeleverd 🎤</li>
+                        </ul>
+                    </div>
+
+                    <!-- Extra info -->
+                    <div style="flex: 1 1 300px;">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">🔧 Features & Tech</h4>
+                        <ul style="list-style: none; padding-left: 0; margin: 0;">
+                            <li>🌐 Gemaakt in React + Tailwind CSS</li>
+                            <li>🎯 Oefeningen: sleepvragen, invulvragen, MC</li>
+                            <li>📖 Volledig werkboek-gebaseerd</li>
+                            <li>🧪 Gebruikerstests + WCAG-checks</li>
+                            <li>🔐 Inloggen via HR SSO</li>
+                            <li>🧰 API & database in samenwerking met backend</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>
+                    De app is gepresenteerd aan de opdrachtgever tijdens een live demo. Het project werd positief ontvangen en is klaar voor toekomstige doorontwikkeling, zoals AI-gebarenherkenning en uitbreidbare lesinhoud.
+                </p>
+                <a href="https://github.com/QuintenVanDerBlom/SignWitch" target="_blank" style="display: inline-block; background-color: #38bdf8; color: white; font-weight: bold; padding: 0.6rem 1.2rem; border-radius: 0.5rem; text-decoration: none; transition: background-color 0.3s;">
+                    🚀 Link naar de Github
+                </a>
+            </div>
+        </div>
+
+        <div class="gallery-cell" style="padding: 1.5rem; background-color: #f8fafc; border-radius: 1rem; box-shadow: 0 -4px 12px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
+            <img src="images/openhiring.png" alt="Open Hiring Project" style="border-radius: 1rem; width: 100%; height: auto; margin-bottom: 1rem;">
+            <div class="content">
+                <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">🤝 Open Hiring – Solliciteren zonder drempels</h3>
+                <p style="margin-bottom: 1rem;">
+                    Voor het project <strong>Open Hiring</strong> ontwierpen we een mobile-first platform dat drempelloos solliciteren mogelijk maakt. Geen cv's, geen sollicitatiebrieven – iedereen verdient een eerlijke kans op werk. Deze applicatie is gericht op mensen die normaal buiten de boot vallen in het traditionele sollicitatieproces, zoals laaggeletterden en mensen met beperkingen.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    Het platform heeft een duidelijke, toegankelijke interface met eenvoudige navigatie, herkenbare iconen en een moderne uitstraling. De hele look & feel is afgestemd op de huisstijl van Open Hiring. Ook is er rekening gehouden met toegankelijkheidseisen zoals de WCAG-richtlijnen.
+                </p>
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 1rem;">
+                    <!-- Mijn rol -->
+                    <div style="flex: 1 1 300px;">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">💻 Mijn rol</h4>
+                        <ul style="padding-left: 0; list-style: none; margin: 0;">
+                            <li>Mobile-first design met focus op toegankelijkheid 📱</li>
+                            <li>Gebruiksvriendelijk prototype ontworpen met Figma</li>
+                            <li>Gebruikerstests opgezet & dummydata geoptimaliseerd</li>
+                            <li>Samenwerking met opdrachtgever voor stijl en inhoud</li>
+                        </ul>
+                    </div>
+
+                    <!-- Resultaat & boodschap -->
+                    <div style="flex: 1 1 300px;">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">🎯 Resultaat & visie</h4>
+                        <p style="margin-bottom: 0.75rem;">
+                            Het eindproduct is een werkend prototype met een intuïtieve gebruikerservaring. Het draagt bij aan een inclusieve arbeidsmarkt waarin iedereen zich welkom voelt.
+                        </p>
+                        <p style="margin-bottom: 0.5rem;"><strong>Quote:</strong> <em>"Iedereen verdient een kans op werk."</em></p>
+                    </div>
+                </div>
+                <!-- Knop -->
+                <a href="https://github.com/QuintenVanDerBlom/TLE-Agency-Team-4" target="_blank" style="display: inline-block; background-color: #38bdf8; color: white; font-weight: bold; padding: 0.6rem 1.2rem; border-radius: 0.5rem; text-decoration: none; transition: background-color 0.3s;">
+                    🚀 Link naar de Github
+                </a>
+            </div>
+        </div>
+
+<!--        <div class="gallery-cell">-->
+<!--            <img src="images/ecojourney.png" alt="Project afbeelding">-->
+<!--            <div class="content">-->
+<!--                <h3>Project Titel</h3>-->
+<!--                <p>Korte beschrijving van het project.</p>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+
+
 </section>
+
+
+<section id="contact" class="bg-white py-20 px-6 text-center">
+    <h2 class="text-4xl font-extrabold mb-6 text-blue-900">Contact</h2>
+    <div class="text-lg text-gray-800 space-y-4">
+        <p><strong>Email:</strong> <a href="mailto:elisazornig@gmail.com" class="text-blue-600 hover:underline">elisazornig@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/elisa-zornig-creative-media-and-web-developer/" target="_blank" class="text-blue-600 hover:underline">https://www.linkedin.com/in/elisa-zornig-creative-media-and-web-developer/</a></p>
+    </div>
+</section>
+
+
 
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+        },
+        breakpoints: {
+            640: {slidesPerView: 3},
+            768: {slidesPerView: 4},
+            1024: {slidesPerView: 6},
+        }
+    });
+</script>
+
+
